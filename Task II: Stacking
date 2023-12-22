@@ -1,1 +1,74 @@
+Integer Tokens
+Integer Blocks
 
+Integer BT
+
+Integer tower
+Double TokenHeigh
+Double BlockHeigh
+Function task2
+
+Motor On
+Power High
+Speed 100
+Accel 60, 60
+SpeedS 800
+AccelS 6000
+Tool 1
+
+BT = 5
+Tokens = 0
+Blocks = 0
+TokenHeigh = 6.0
+BlockHeigh = 6.0
+tower = 0
+Integer BlockID
+
+Go Retract_Safe
+
+For BlockID = BT To 0 Step -1
+	Pick_Infeed_Block2()
+	Alignment_Block2()
+	Pick_Infeed_Token2()
+	Alignment_Block2()
+	Tokens = Tokens + 1
+	Blocks = Blocks + 1
+	BT = BT - 1
+Next BlockID
+Go Retract_Safe
+Fend
+Function Pick_Infeed_Token2
+	'Pick Token from Infeed
+	Print "Picking Token from Infeed. Token ID = ", Tokens
+    Go B2_Infeed_Tsafe +Z(-20 - (Tokens * TokenHeigh)) +X(156) +Y(115) /3 CP
+	'圓形安全點
+	On 8
+	Go B2_Infeed_Tsafe +Z(-49.5 - (Tokens * TokenHeigh)) +X(156) +Y(115) /3 CP
+	'取圓形
+    Go B2_Infeed_Tsafe +Z(-20) +X(156) +Y(115) /3 CP
+	'回圓形安全點
+Fend
+Function Pick_Infeed_Block2
+	'Pick Block from Infeed
+	Print "Picking Block from Infeed. Block ID = ", Blocks
+	Go B2_Infeed +Z(43 - (Blocks * BlockHeigh)) +X(185.5) +Y(111.5) /3 CP
+	'方形安全點
+	On 8
+	Go B2_Infeed +Z(29 - (Blocks * BlockHeigh)) +X(185.5) +Y(111.5) /3 CP
+	'取方形
+	Go B2_Infeed +Z(43) +X(185) +Y(111.5) /3 CP
+	'回方形安全點
+Fend
+Function Alignment_Block2
+	'Alignment Block
+   Print "Aligning Block. Block ID = ", Blocks
+   Go B2_Align +Z(20 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置上方
+   Go B2_Align +Z(4.5 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置
+   Off 8
+   Wait 0.1
+   Go B2_Align +Z(20 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置後上抬
+   tower = tower + 1
+Fend
