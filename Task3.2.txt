@@ -1,0 +1,150 @@
+Integer Tokens
+Integer Blocks
+Integer B
+Integer T
+Double TokenHeigh
+Double BlockHeigh
+Function task4
+
+Motor On
+Power High
+Speed 60
+Accel 60, 60
+SpeedS 400
+AccelS 5000
+Tool 1
+
+Tokens = 0
+Blocks = 0
+B = 2
+T = 2
+TokenHeigh = 6.0
+BlockHeigh = 6.0
+Integer TokenID
+Integer BlockID
+
+Go B2_Infeed_Tsafe +Z(-25) +X(156.5) +Y(111) /3 CP
+
+For TokenID = T To 0 Step -1
+	Pick_Infeed_Token4()
+	Alignment_Token4()
+	Place_Tray_Token4()
+	Tokens = Tokens + 1
+	T = T - 1
+Next TokenID
+
+For BlockID = B To 0 Step -1
+	Pick_Infeed_Block4()
+	Alignment_Block4()
+	Place_Tray_Block4()
+	Blocks = Blocks + 1
+	B = B - 1
+Next BlockID
+
+Go B2_Infeed_Tsafe +Z(-25) +X(156.5) +Y(111) /3 CP
+
+Fend
+
+Function Pick_Infeed_Token4
+	'Pick Token from Infeed
+	Print "Picking Token from Infeed. Token ID = ", Tokens
+    Go B2_Infeed_Tsafe +Z(-25) +X(156.5) +Y(111) /3 CP
+	'圓形安全點
+	On 8
+	Go B2_Infeed_Tsafe +Z(-69.5 - (Tokens * TokenHeigh)) +X(156) +Y(111) /3 CP
+	'取圓形
+	Wait .1
+	Go B2_Infeed_Tsafe +Z(-25) +X(156.5) +Y(111.5) /3 CP
+	'回圓形安全點
+	Go B2_Infeed_Tsafe +Z(-25) +X(104.5) +Y(111.5) /3 CP
+	'取後安全點
+Fend
+
+Function Pick_Infeed_Block4
+	'Pick Block from Infeed
+	Print "Picking Block from Infeed. Block ID = ", Blocks
+	
+	Go B2_Infeed +Z(47) +X(184.5) +Y(108) /3 CP
+	'方形安全點
+	On 8
+	Go B2_Infeed +Z(6 - (Blocks * BlockHeigh)) +X(184.5) +Y(108) /3 CP
+	'取方形
+	Wait .1
+	Go B2_Infeed +Z(47) +X(184.5) +Y(108) /3 CP
+	'回方形安全點
+    Go B2_Infeed +Z(47) +X(114.5) +Y(108) /3 CP
+	'取後安全點
+Fend
+Function Alignment_Token4
+	'Alignment Token
+	Print "Aligning Token. Token ID = ", Tokens
+	Go B2_Align +Z(10) +X(87) +Y(46.8) /2
+	'校正安全點
+	Go B2_Align +Z(3.5) +X(87) +Y(46.8) /2
+	'放下校正點
+	Go B2_Align +Z(3.5) +X(88.2) +Y(46.8) /2
+    '推
+    Off 8
+    Wait 0.1
+    Go B2_Align +Z(10) +X(88.2) +Y(46.8) /2
+   '抬起
+    Go B2_Align +Z(10) +X(88.2) +Y(46.8) /2
+   '推後正中取上方
+    On 8
+    Go B2_Align +Z(3) +X(88.2) +Y(46.8) /2
+   '推後正中取
+    Go B2_Align +Z(50) +X(88.5) +Y(46.5) /2
+   '推後正中取後
+Fend
+
+Function Alignment_Block4
+	'Alignment Block
+	Print "Aligning Block. Block ID = ", Blocks
+	Go B2_Align +Z(15) +X(92) +Y(24) /2
+   '校正安全點
+    Go B2_Align +Z(3) +X(92) +Y(24) /2
+    '放下校正點
+    Move B2_Align +Z(3) +X(92) +Y(24) /2
+   '推
+   Off 8
+   Wait 0.1
+   'Go B2_Align +Z(10) +X(94) +Y(24) /2
+   '推完上方
+   Go B2_Align +Z(15) +X(92.5) +Y(24) /2
+   '推後正中取上方
+   On 8
+   Go B2_Align +Z(2.8) +X(92.5) +Y(24) /2
+   '推後正中取
+   Go B2_Align +Z(30) +X(92.5) +Y(24) /2
+   '推後正中取上方
+Fend
+Function Place_Tray_Token4
+	'Tray Token
+	Print "Placing Token in Tray. Tray Position ID = ", Tokens
+    Go B2_Infeed_Tsafe +Z(-70) -X(15.35) +Y(-8.5 + (30. * Tokens)) /4 CP
+    '圓形放置上方
+    Go B2_Infeed_Tsafe +Z(-78) -X(15.35) +Y(-8.5 + (30. * Tokens)) /4 CP
+    '圓形放
+    Wait 0.2
+    Off 8
+	Wait 0.1
+	'放置
+    Go B2_Infeed_Tsafe +Z(-70) -X(15.35) +Y(-8.5 + (30. * Tokens)) /4 CP
+	'圓形放置上方
+	
+Fend
+Function Place_Tray_Block4
+	'Tray Block
+	Print "Placing Block in Tray. Block Position ID = ", Blocks
+    Go B2_Infeed_Tsafe +Z(-69) +X(14.7) +Y(-6.7 + (30. * Blocks)) /4 CP
+    '方形放置上方
+    Go B2_Infeed_Tsafe +Z(-77.5) +X(14.7) +Y(-6.7 + (30. * Blocks)) /4 CP
+   '方形放置
+    Wait 0.2
+	Off 8
+	Wait .1
+	'放置
+    Go B2_Infeed_Tsafe +Z(-79) +X(14.74) +Y(-6.7 + (30. * Blocks)) /4 CP
+	'方形放置安全點
+
+Fend
