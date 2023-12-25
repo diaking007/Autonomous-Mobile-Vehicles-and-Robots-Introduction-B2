@@ -7,14 +7,20 @@ M11251007 曹育齊<p>
 ## Task 0: build simulation 3D models, layout, and code.  
 ![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/a7d1140b-d149-4470-b54e-3de3fb535beb)
 
+
+
 ## Task  I: Pick-n-Place.
 ### Task I Simuation Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/929bb7a8-85b0-4173-9c34-f5de5d19d67e)
-](https://youtu.be/ieajvL-u7Sk)
+<a href="https://youtu.be/ieajvL-u7Sk">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/929bb7a8-85b0-4173-9c34-f5de5d19d67e" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 ### Task I Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/41ded7bd-3865-41ec-afea-7a7fc23c4d3f)
-](https://youtu.be/GHq2T_IGxhY)
+<a href="https://youtu.be/GHq2T_IGxhY">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/41ded7bd-3865-41ec-afea-7a7fc23c4d3f" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 <details>
 <summary><h3>Task I Code<h3></summary>
@@ -173,12 +179,16 @@ Fend
 
 ## Task II: Stacking .
 ### Task II Simuation Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/33f44b01-d35e-4ef7-9ca7-73ead0b33a13)
-](https://youtu.be/Mx_2KzGobEc?si=jRAcQ1cFjPl_ZIlT)
+<a href="https://youtu.be/Mx_2KzGobEc?si=jRAcQ1cFjPl_ZIlT">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/33f44b01-d35e-4ef7-9ca7-73ead0b33a13" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 ### Task II Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/952bf45e-4bc4-4181-8e02-4896a7219b8c)
-](https://youtu.be/Eb1DDYEBGuA?si=vRkxmAY_--cjCTe6)
+<a href="https://youtu.be/Eb1DDYEBGuA?si=vRkxmAY_--cjCTe6">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/952bf45e-4bc4-4181-8e02-4896a7219b8c" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 <details>
 <summary><h3>Task II Code<h3></summary>
@@ -273,12 +283,16 @@ Fend
 6.最後繼續<p>
 
 ### Task 3.1 Simuation Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/52cfdb90-fcf4-4337-a02a-c9468643c2b8)
-](https://youtu.be/L3rI8qH2acw?si=6q4mtk-vnBReiUEP)
+<a href="https://youtu.be/L3rI8qH2acw?si=6q4mtk-vnBReiUEP">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/52cfdb90-fcf4-4337-a02a-c9468643c2b8" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 ### Task 3.1 Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/8ce32a3b-a272-4ab2-9078-ca2eefcc99d0)
-](https://youtu.be/L3rI8qH2acw)
+<a href="https://youtu.be/L3rI8qH2acw">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/8ce32a3b-a272-4ab2-9078-ca2eefcc99d0" alt="YouTube Video" width="600" height="400">
+</a>
+
 
 
 <details>
@@ -537,8 +551,10 @@ Fend
 ### 3.2 
 做一個Tray 有傾斜角30度，一樣放料的環節
 ### Task 3.2 Video
-[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/c440efb1-8d08-4c93-9136-61b5c9a9b5f0)
-](https://youtu.be/4oapPF_Quws)
+<a href="https://youtu.be/4oapPF_Quws">
+  <img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/c440efb1-8d08-4c93-9136-61b5c9a9b5f0" alt="YouTube Video" width="600" height="400">
+</a>
+
 <details>
 <summary><h3>Task 3.2 Code<h3></summary>
 
@@ -699,10 +715,11 @@ Fend
 </details>
 
 ### Task 3.2 CAD
-斜板
-![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/3b29a4a9-b755-46ff-8be8-2fb3e74b1f3f)
-![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/dc8a3b65-f908-489a-9972-039dacb2627a)
-![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/cd388447-59ef-49c6-9a99-b04808633b0a)
-![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/3375f96f-c042-46e1-a3c4-81223dd58e37)
+斜板<p>
+<img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/3b29a4a9-b755-46ff-8be8-2fb3e74b1f3f" alt="image" width="600" height="400">
+<img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/dc8a3b65-f908-489a-9972-039dacb2627a" alt="image" width="600" height="400">
+<img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/cd388447-59ef-49c6-9a99-b04808633b0a" alt="image" width="600" height="400">
+<img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/3375f96f-c042-46e1-a3c4-81223dd58e37" alt="image" width="600" height="400">
+
 
 
