@@ -1,4 +1,8 @@
 # Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2
+成員介紹<p>
+M11251005 黃郁鈞<p>
+M11251006 蔣芷紜<p>
+M11251007 曹育齊<p>
 
 ## Task 0: build simulation 3D models, layout, and code.  
 ![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/a7d1140b-d149-4470-b54e-3de3fb535beb)
