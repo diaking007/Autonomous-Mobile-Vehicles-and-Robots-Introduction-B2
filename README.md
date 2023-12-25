@@ -9,4 +9,4 @@
 
 ## Task III: Integration with I/O box, HMI .
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/"YOUR_VIDEO_ID"/0.jpg)](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/blob/main/724852699.984045.mp4)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/"YOUR_VIDEO_ID"/0.jpg)](https://youtu.be/T5CafZBQyEs)
