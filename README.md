@@ -15,10 +15,13 @@
 ## Task 0: build simulation 3D models, layout, and code.  
 
 ## Task  I: Pick-n-Place.
-
+### Task I Simuation Video
 [![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/929bb7a8-85b0-4173-9c34-f5de5d19d67e)
 ](https://youtu.be/ieajvL-u7Sk)
 
+### Task I Video
+[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/41ded7bd-3865-41ec-afea-7a7fc23c4d3f)
+](https://youtu.be/GHq2T_IGxhY)
 
 <details>
 <summary><h3>Task I Code<h3></summary>
@@ -174,7 +177,98 @@ Fend
 ```
 
 </details>
+
 ## Task II: Stacking .
+### Task II Simuation Video
+[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/33f44b01-d35e-4ef7-9ca7-73ead0b33a13)
+](https://youtu.be/Mx_2KzGobEc?si=jRAcQ1cFjPl_ZIlT)
+
+### Task II Video
+[![IMAGE ALT TEXT](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/952bf45e-4bc4-4181-8e02-4896a7219b8c)
+](https://youtu.be/Eb1DDYEBGuA?si=vRkxmAY_--cjCTe6)
+
+<details>
+<summary><h3>Task II Code<h3></summary>
+
+```
+Integer Tokens
+Integer Blocks
+
+Integer BT
+
+Integer tower
+Double TokenHeigh
+Double BlockHeigh
+Function task2
+
+Motor On
+Power High
+Speed 100
+Accel 60, 60
+SpeedS 800
+AccelS 6000
+Tool 1
+
+BT = 5
+Tokens = 0
+Blocks = 0
+TokenHeigh = 6.0
+BlockHeigh = 6.0
+tower = 0
+Integer BlockID
+
+Go Retract_Safe
+
+For BlockID = BT To 0 Step -1
+	Pick_Infeed_Block2()
+	Alignment_Block2()
+	Pick_Infeed_Token2()
+	Alignment_Block2()
+	Tokens = Tokens + 1
+	Blocks = Blocks + 1
+	BT = BT - 1
+Next BlockID
+Go Retract_Safe
+Fend
+Function Pick_Infeed_Token2
+	'Pick Token from Infeed
+	Print "Picking Token from Infeed. Token ID = ", Tokens
+    Go B2_Infeed_Tsafe +Z(-20 - (Tokens * TokenHeigh)) +X(156) +Y(115) /3 CP
+	'圓形安全點
+	On 8
+	Go B2_Infeed_Tsafe +Z(-49.5 - (Tokens * TokenHeigh)) +X(156) +Y(115) /3 CP
+	'取圓形
+    Go B2_Infeed_Tsafe +Z(-20) +X(156) +Y(115) /3 CP
+	'回圓形安全點
+Fend
+Function Pick_Infeed_Block2
+	'Pick Block from Infeed
+	Print "Picking Block from Infeed. Block ID = ", Blocks
+	Go B2_Infeed +Z(43 - (Blocks * BlockHeigh)) +X(185.5) +Y(111.5) /3 CP
+	'方形安全點
+	On 8
+	Go B2_Infeed +Z(29 - (Blocks * BlockHeigh)) +X(185.5) +Y(111.5) /3 CP
+	'取方形
+	Go B2_Infeed +Z(43) +X(185) +Y(111.5) /3 CP
+	'回方形安全點
+Fend
+Function Alignment_Block2
+	'Alignment Block
+   Print "Aligning Block. Block ID = ", Blocks
+   Go B2_Align +Z(20 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置上方
+   Go B2_Align +Z(4.5 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置
+   Off 8
+   Wait 0.1
+   Go B2_Align +Z(20 + (tower * BlockHeigh)) +X(92.5) +Y(27) /2
+   '放置後上抬
+   tower = tower + 1
+Fend
+
+```
+
+</details>
 
 ## Task III: Integration with I/O box, HMI .
 
