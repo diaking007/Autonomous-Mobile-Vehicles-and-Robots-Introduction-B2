@@ -6,6 +6,8 @@ M11251007 曹育齊<p>
 
 ## Task 0: build simulation 3D models, layout, and code.  
 ![image](https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/a7d1140b-d149-4470-b54e-3de3fb535beb)
+<img src="https://github.com/diaking007/Autonomous-Mobile-Vehicles-and-Robots-Introduction-B2/assets/136183053/dd1884f4-f00d-4925-980b-dae68bcdf70f" alt="image" width="600" height="400">
+
 
 
 
